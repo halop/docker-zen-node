@@ -43,8 +43,8 @@ totalm=$(($totalmem + $totalswp))
 if [ $totalm -lt 4000 ]; then
   print_status "Server memory is less then 4GB..."
   if ! grep -q '/swapfile' /etc/fstab ; then
-    print_status "Creating a 2GB swapfile..."
-    fallocate -l 2G /swapfile
+    print_status "Creating a 3GB swapfile..."
+    fallocate -l 3G /swapfile
     chmod 600 /swapfile
     mkswap /swapfile
     swapon /swapfile
