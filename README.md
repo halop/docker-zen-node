@@ -27,7 +27,7 @@ cause any issues.
 *Note:* Check the [ansible installer](https://github.com/WhenLamboMoon/docker-zen-node/tree/master/ansible) if you plan on installing multiple nodes
 
 ```
-apt-get install curl
+apt-get install curl -y
 curl -O https://raw.githubusercontent.com/halop/docker-zen-node/master/install.sh
 chmod +x install.sh
 ./install.sh <stakeaddr> <email> <fqdn> <region> <nodetype>
