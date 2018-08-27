@@ -5,8 +5,8 @@ This repository will help you setup a zencash node with a single bash script.
 The script will install Docker on a fresh Ubuntu VM and provision the following
 containers:
 
-- zend https://hub.docker.com/r/whenlambomoon/zend/
-- Securenodetracker https://hub.docker.com/r/whenlambomoon/secnodetracker/
+- zend https://hub.docker.com/r/halop/zend/
+- Securenodetracker https://hub.docker.com/r/halop/secnodetracker/
 
 Certbot will be installed and auto-renew your SSL certificates when required.
 
@@ -27,7 +27,7 @@ cause any issues.
 *Note:* Check the [ansible installer](https://github.com/WhenLamboMoon/docker-zen-node/tree/master/ansible) if you plan on installing multiple nodes
 
 ```
-curl -O https://raw.githubusercontent.com/WhenLamboMoon/docker-zen-node/master/install.sh
+curl -O https://raw.githubusercontent.com/halop/docker-zen-node/master/install.sh
 chmod +x install.sh
 ./install.sh <stakeaddr> <email> <fqdn> <region> <nodetype>
 ```
