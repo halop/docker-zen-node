@@ -249,7 +249,12 @@ else
   docker exec -it zen-node /usr/local/bin/gosu user zen-cli z_listaddresses
 fi
 
-print_status "Install Finished"
-echo "Please wait until the blocks are up to date..."
+systemctl stop zen-secnodetracker
+systemctl stop zen-node
+sleep 20
+rm -r /mnt/zen/config/{blocks,chainstate,database}
+
+print_status "Install Finished, Zen and Tracker stopped"
+echo "Please start scp bootstrap"
 
 ## TODO: Post the shield address back to our API
